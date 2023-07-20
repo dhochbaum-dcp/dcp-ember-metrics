@@ -1,5 +1,5 @@
-import { compact } from 'ember-metrics/-private/utils/object-transforms';
-import removeFromDOM from 'ember-metrics/-private/utils/remove-from-dom';
+import { compact } from 'dcp-ember-metrics/-private/utils/object-transforms';
+import removeFromDOM from 'dcp-ember-metrics/-private/utils/remove-from-dom';
 import BaseAdapter from './base';
 import { assert } from '@ember/debug';
 
@@ -12,7 +12,7 @@ export default class FacebookPixel extends BaseAdapter {
     const { id, dataProcessingOptions } = this.config;
 
     assert(
-      `[ember-metrics] You must pass a valid \`id\` to the ${this.toString()} adapter`,
+      `[dcp-ember-metrics] You must pass a valid \`id\` to the ${this.toString()} adapter`,
       id
     );
 

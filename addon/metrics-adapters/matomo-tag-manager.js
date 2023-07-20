@@ -11,7 +11,7 @@ export default class MatomoTagManager extends BaseAdapter {
     const { matomoUrl, containerId } = this.config;
 
     assert(
-      `[ember-metrics] You must pass a \`matomoUrl\` and a \`containerId\` to the ${this.toString()} adapter`,
+      `[dcp-ember-metrics] You must pass a \`matomoUrl\` and a \`containerId\` to the ${this.toString()} adapter`,
       matomoUrl && containerId
     );
 
@@ -32,7 +32,7 @@ export default class MatomoTagManager extends BaseAdapter {
   }
 
   trackEvent(options = {}) {
-    window._mtm.push([
+    _paq.push([
       'trackEvent',
       options.category,
       options.action,
@@ -42,8 +42,8 @@ export default class MatomoTagManager extends BaseAdapter {
   }
 
   trackPage(options = {}) {
-    window._mtm.push(['setCustomUrl', options.page]);
-    window._mtm.push(['trackPageView', options.title]);
+    _paq.push(['setCustomUrl', options.page]);
+    _paq.push(['trackPageView', options.title]);
   }
 
   uninstall() {

@@ -1,6 +1,6 @@
 import { assert } from '@ember/debug';
-import removeFromDOM from 'ember-metrics/-private/utils/remove-from-dom';
-import { compact } from 'ember-metrics/-private/utils/object-transforms';
+import removeFromDOM from 'dcp-ember-metrics/-private/utils/remove-from-dom';
+import { compact } from 'dcp-ember-metrics/-private/utils/object-transforms';
 import BaseAdapter from './base';
 
 export default class Segment extends BaseAdapter {
@@ -14,7 +14,7 @@ export default class Segment extends BaseAdapter {
     const proxyDomain = config.proxyDomain || 'https://cdn.segment.com';
 
     assert(
-      `[ember-metrics] You must pass a valid \`key\` to the ${this.toString()} adapter`,
+      `[dcp-ember-metrics] You must pass a valid \`key\` to the ${this.toString()} adapter`,
       segmentKey
     );
 

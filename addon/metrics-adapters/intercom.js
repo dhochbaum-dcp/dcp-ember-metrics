@@ -2,8 +2,8 @@ import { assert } from '@ember/debug';
 import {
   compact,
   without,
-} from 'ember-metrics/-private/utils/object-transforms';
-import removeFromDOM from 'ember-metrics/-private/utils/remove-from-dom';
+} from 'dcp-ember-metrics/-private/utils/object-transforms';
+import removeFromDOM from 'dcp-ember-metrics/-private/utils/remove-from-dom';
 import BaseAdapter from './base';
 
 export default class Intercom extends BaseAdapter {
@@ -17,7 +17,7 @@ export default class Intercom extends BaseAdapter {
     const { appId } = this.config;
 
     assert(
-      `[ember-metrics] You must pass a valid \`appId\` to the ${this.toString()} adapter`,
+      `[dcp-ember-metrics] You must pass a valid \`appId\` to the ${this.toString()} adapter`,
       appId
     );
 
@@ -45,7 +45,7 @@ export default class Intercom extends BaseAdapter {
     }
 
     assert(
-      `[ember-metrics] You must pass \`distinctId\` or \`email\` to \`identify()\` when using the ${this.toString()} adapter`,
+      `[dcp-ember-metrics] You must pass \`distinctId\` or \`email\` to \`identify()\` when using the ${this.toString()} adapter`,
       props.email || props.user_id
     );
 

@@ -4,8 +4,8 @@ import {
   without,
   compact,
   hasOwnProperties,
-} from 'ember-metrics/-private/utils/object-transforms';
-import removeFromDOM from 'ember-metrics/-private/utils/remove-from-dom';
+} from 'dcp-ember-metrics/-private/utils/object-transforms';
+import removeFromDOM from 'dcp-ember-metrics/-private/utils/remove-from-dom';
 
 export default class Pendo extends BaseAdapter {
   toStringExtension() {
@@ -16,7 +16,7 @@ export default class Pendo extends BaseAdapter {
     const { apiKey } = this.config;
 
     assert(
-      `[ember-metrics] You must pass a valid \`apiKey\` to the ${this.toString()} adapter`,
+      `[dcp-ember-metrics] You must pass a valid \`apiKey\` to the ${this.toString()} adapter`,
       apiKey
     );
 
