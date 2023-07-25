@@ -15,7 +15,7 @@ export default class MatomoTagManager extends BaseAdapter {
       matomoUrl && containerId
     );
 
-    this._injectScript(matomoUrl, containerId);
+    // this._injectScript(matomoUrl, containerId);
   }
 
   // prettier-ignore
