@@ -32,18 +32,22 @@ export default class MatomoTagManager extends BaseAdapter {
   }
 
   trackEvent(options = {}) {
-    _paq.push([
-      'trackEvent',
-      options.category,
-      options.action,
-      options.name,
-      options.value,
-    ]);
+    if(typeof _paq !== 'undefined') {
+      _paq.push([
+        'trackEvent',
+        options.category,
+        options.action,
+        options.name,
+        options.value,
+      ]);
+    }
   }
 
   trackPage(options = {}) {
-    _paq.push(['setCustomUrl', options.page]);
-    _paq.push(['trackPageView', options.title]);
+    if(typeof _paq !== 'undefined') {
+      _paq.push(['setCustomUrl', options.page]);
+      _paq.push(['trackPageView', options.title]);
+    }
   }
 
   uninstall() {
